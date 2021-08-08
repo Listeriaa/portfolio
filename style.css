@@ -1,10 +1,10 @@
 * {
     font-family: 'Open Sans', sans-serif;
-
     margin: 0;
     padding: 0;
-    text-align: justify;
     box-sizing: border-box;
+    cursor: pointer;
+
 }
 
 body {
@@ -23,10 +23,10 @@ li {
     list-style: none;
 }
 
-.container {
-    z-index: -1;
-    min-height: 100vh;
-    height: 100%;
+#container {
+    z-index: -5;
+    height: 100vh;
+    
 }
 
 main,
@@ -36,13 +36,54 @@ section {
 
 header {
     position: relative;
-    display: flex;
-    flex-direction: column;
+   
     min-height: 100vh;
-    height: 100%;
+    
+
+}
+.header--info{
+    position:relative;
+    margin-top:50vh;
+    transform:translateY(-50%);
+    text-align: center;
 
 }
 
+h1 {
+   
+    font-size: 3.5rem;
+    padding: 20px 15px;
+
+    color:rgba(255, 255, 255, 0.9);
+}
+
+
+.header--info>h2 {
+    font-size: 2em;
+    padding: 20px 15px;
+
+}
+.icon{
+    font-size: 4.5rem;    
+    display: block;
+    width:4.5rem;
+    margin: 0 auto;
+    transition: all 0.5s;
+
+
+}
+.icon .fa-meteor{
+    transition: all 0.5s;
+    color: rgba(255, 255, 255, 0.9);
+    transform: rotate(-45deg);
+
+
+}
+.icon:hover{
+    color :#080808;
+    transform: translateY(50px);
+
+}
 nav>ul {
     display: flex;
     justify-content: space-around;
@@ -51,7 +92,8 @@ nav>ul {
 }
 
 nav>ul>li>a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+
     font-weight: bolder;
 }
 
@@ -64,7 +106,11 @@ main {
     border: 1px solid rgba(114, 1, 134, 0.18);
 
 }
-
+.main-container{
+    position:absolute;
+    top:0;
+    width:100%;
+}
 section {
     width: 90%;
 
@@ -78,24 +124,10 @@ footer p {
 }
 
 
-h1 {
-    padding: 20% 5%;
-    font-size: 3.5rem;
-    text-align: center;
-    color:rgba(255, 255, 255, 0.9);
-}
 
-h2 {
-    font-size: 2em;
-    padding: 20% 5%;
 
-    text-align: center;
-    padding: 5px;
+.presentation:hover{
+color:blue;
 }
-.icon{
-    font-style: 50%;
-    text-align: center;
-}
-
 /*VERSION BUREAU DU CV*/
 @media screen and (min-width: 980px) {}
