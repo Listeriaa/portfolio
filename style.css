@@ -1,5 +1,5 @@
 * {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +12,11 @@ body {
     color: #fff;
 
 }
-
+h1,
+h2,
+footer p {
+    font-family: 'Orbitron', sans-serif;
+}
 a {
     text-decoration: none;
     color: #fff;
@@ -25,7 +29,10 @@ li {
 
 #container {
     z-index: -5;
-    height: 100vh;
+    position : fixed;
+    height:100vh;
+    width:100%;
+    
 
 }
 
@@ -78,9 +85,7 @@ h1 {
 .icon .fa-rocket {
     transition: all 0.5s;
     color: rgba(255, 255, 255, 0.966);
-    
     animation: 3s cubic-bezier(.97, .1, .83, .67) infinite rocketanimation;
-
 
 }
 
@@ -89,36 +94,24 @@ h1 {
         opacity: 1;
         transform: rotate(135deg) translateY(0px);
 
-
     }
-
-
 
     25% {
         transform: rotate(135deg) translateY(0px);
     }
 
-    50% {
-
-     
-    } 
-
     75% {
-   
         opacity: 0.9;
     }
 
     90% {
         opacity: 0;
         color: rgba(45, 2, 94, 0.384);
-
     }
 
     to {
         transform: translateY(200px) rotate(135deg);
         opacity: 0;
-
-
 
     }
 }
@@ -142,16 +135,6 @@ nav>ul>li>a {
     font-weight: bolder;
 }
 
-main {
-    background: rgba(177, 177, 177, 0.05);
-    box-shadow: 0 8px 32px 0 rgba(46, 46, 46, 0.37);
-    backdrop-filter: blur(10.0px);
-    -webkit-backdrop-filter: blur(10.0px);
-    border-radius: 10px;
-    border: 1px solid rgba(114, 1, 134, 0.18);
-
-}
-
 .main-container {
     position: absolute;
     top: 0;
@@ -159,18 +142,24 @@ main {
 }
 
 section {
-    width: 90%;
-
-    margin: 0 auto;
+    background: rgba(177, 177, 177, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(46, 46, 46, 0.37);
+    backdrop-filter: blur(8.0px);
+    -webkit-backdrop-filter: blur(10.0px);
+    border: 1px solid rgba(114, 1, 134, 0.18);
+    margin: 0px auto 35px auto;
+    padding : 35px 15px;
+}
+section>h2 {
+    padding:0px 0px 15px 30px;
 }
 
-h1,
-h2,
-footer p {
-    font-family: 'Orbitron', sans-serif;
+
+footer {
+    text-align: center;
+    font-weight: bolder;
+    padding : 20px 10px;
 }
-
-
 
 
 .presentation:hover {
