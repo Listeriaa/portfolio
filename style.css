@@ -141,26 +141,36 @@ nav>ul>li>a {
     width: 100%;
 }
 
-section {
-    background: rgba(177, 177, 177, 0.05);
-    box-shadow: 0 8px 32px 0 rgba(46, 46, 46, 0.37);
+.presentation,
+.contact {
+    background: rgba(136, 136, 136, 0.05);
+    /* box-shadow: 0 8px 32px 0 rgba(46, 46, 46, 0.37); */
     backdrop-filter: blur(8.0px);
     -webkit-backdrop-filter: blur(10.0px);
-    border: 1px solid rgba(114, 1, 134, 0.18);
-    margin: 0px auto 35px auto;
-    padding : 35px 15px;
+    /* border: 1px solid rgba(114, 1, 134, 0.18); */
+    margin: 0rem auto 3.5rem auto;
+    padding : 1rem 1.5rem;
 }
-section>h2 {
-    padding:0px 0px 15px 30px;
+.title-section {
+    padding:0px 1rem 1.5rem 0.5rem;
 }
-
-
+.title-section:nth-of-type(even){
+    text-align : right;
+}
+.title-section>span {
+    padding-right: 1.5rem;
+}
+.presentation>p {
+    text-align: justify;
+}
 footer {
     text-align: center;
     font-weight: bolder;
     padding : 20px 10px;
 }
-
+img {
+    width:40%;
+}
 
 .presentation:hover {
     color: blue;
