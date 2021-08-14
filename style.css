@@ -14,6 +14,7 @@ body {
 }
 h1,
 h2,
+h3,
 footer p {
     font-family: 'Orbitron', sans-serif;
 }
@@ -116,11 +117,7 @@ h1 {
     }
 }
 
-.icon:hover {
-    color: #080808;
-    transform: translateY(50px);
 
-}
 
 nav>ul {
     display: flex;
@@ -141,8 +138,9 @@ nav>ul>li>a {
     width: 100%;
 }
 
-.presentation,
-.contact {
+.presentation>p,
+.contact, 
+.project-element {
     background: rgba(136, 136, 136, 0.05);
     /* box-shadow: 0 8px 32px 0 rgba(46, 46, 46, 0.37); */
     backdrop-filter: blur(8.0px);
@@ -154,9 +152,7 @@ nav>ul>li>a {
 .title-section {
     padding:0px 1rem 1.5rem 0.5rem;
 }
-.title-section:nth-of-type(even){
-    text-align : right;
-}
+
 .title-section>span {
     padding-right: 1.5rem;
 }
@@ -169,9 +165,26 @@ footer {
     padding : 20px 10px;
 }
 img {
-    width:40%;
+    width:100%;
 }
-
+.icon-plus{
+    display:block;
+    margin: 0 auto;
+    width: 2rem;
+}
+.icon-plus .fa-plus {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+.show-info {
+    padding:1.5rem 1rem;
+  
+}
+.show-info>h3 {
+    text-align: center;
+    padding-bottom : 1.8rem;
+}
 .presentation:hover {
     color: blue;
 }
