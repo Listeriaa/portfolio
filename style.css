@@ -15,6 +15,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 footer p {
     font-family: 'Orbitron', sans-serif;
 }
@@ -168,26 +169,49 @@ img {
     width:100%;
 }
 .icon-plus{
-    display:block;
-    margin: 0 auto;
+    display:flex;
+    margin: 0 0 0 auto;
     width: 2rem;
+    align-items: center;
 }
 .icon-plus .fa-plus {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: rgba(255, 255, 255, 0.9);
     text-align: center;
+}
+.project-element{
+    padding:0;
+}
+.project-title-element h3
+{
+    
+    padding-bottom: 1rem;
+}
+
+.project-title-element {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1.5rem;
 }
 .show-info {
     padding:1.5rem 1rem;
   
 }
-.show-info>h3 {
-    text-align: center;
-    padding-bottom : 1.8rem;
+.show-info>p {
+    text-align: justify;
+    padding-bottom: 1rem;
 }
-.presentation:hover {
-    color: blue;
-}
+.project-link>a {
+    display : block;
+    font-weight: bolder;
 
+}
+.project-link {
+    display: flex;
+    justify-content: space-between;
+}
+.icon-link {
+    padding-left: 0.5rem;
+}
 /*VERSION BUREAU DU CV*/
 @media screen and (min-width: 980px) {}
