@@ -1,0 +1,95 @@
+$title-font: 'Orbitron', sans-serif;
+$main-font: 'Montserrat', sans-serif;
+$main-color:#fff;
+
+/* General rules */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+
+}
+
+body {
+    color: $main-color;
+    font-family: $main-font;
+
+}
+h1,h2,h3,h4,footer p {
+    font-family: $title-font;
+}
+a {
+    text-decoration: none;
+    color: $main-color;
+}
+li {
+    list-style: none;
+}
+
+#vanta-background {
+    z-index: -5;
+    position : fixed;
+    height:100vh;
+    width:100%;
+    
+
+}
+main,
+section {
+    position: relative;
+}
+.main-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* Header and nav rules */
+header {
+    position: relative;
+    min-height: 100vh;
+
+    .header__nav{
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 10px;
+
+            
+            li{
+                font-size : 1.3rem;
+                font-weight: bolder;
+
+                a {
+                    font-family:$title-font;
+
+                }
+            }
+        }
+    }
+    
+    .header__info {
+        position: relative;
+        margin-top: 50vh;
+        transform: translateY(-50%);
+        text-align: center;
+
+        h2 {
+            font-size: 2em;
+            padding: 20px 15px;
+            color: rgba($main-color, $alpha: 0.8);
+        
+        }
+        h1 {
+    
+            font-size: 3.5rem;
+            padding: 20px 15px;
+            color: rgba($main-color, $alpha: 0.8);
+            
+        }
+    }
+}
+

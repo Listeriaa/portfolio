@@ -1,54 +1,4 @@
-/* General rules */
 
-* {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    cursor: pointer;
-
-}
-
-body {
-    color: #fff;
-}
-
-h1,
-h2,
-h3,
-h4,
-footer p {
-    font-family: 'Orbitron', sans-serif;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-
-}
-
-li {
-    list-style: none;
-}
-
-#vanta-background {
-    z-index: -5;
-    position : fixed;
-    height:100vh;
-    width:100%;
-    
-
-}
-
-main,
-section {
-    position: relative;
-}
-.main-container {
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
 
 /* Header and nav rules */
 header {
@@ -202,8 +152,23 @@ img {
 .project__element__links {
     margin: 0 auto;
 }
-.element__links__icon {
-    padding-left: 0.5rem;
+.link__icon--first,
+.link__icon--second{
+    transition: transform .3s;
 }
+.link__icon--first::before{
+    top: 105%;
+
+}
+.link__icon--second::before {
+    padding-left: 0.5rem;
+    bottom: 105%;
+
+}
+.project__element__links:hover .link__icon--first:hover{
+    transform: translate3d(0, -105%, 0);
+
+}
+
 /*VERSION BUREAU DU CV*/
 @media screen and (min-width: 980px) {}
