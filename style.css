@@ -1,3 +1,5 @@
+/* General rules */
+
 * {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -8,10 +10,9 @@
 }
 
 body {
-
     color: #fff;
-
 }
+
 h1,
 h2,
 h3,
@@ -19,6 +20,7 @@ h4,
 footer p {
     font-family: 'Orbitron', sans-serif;
 }
+
 a {
     text-decoration: none;
     color: #fff;
@@ -29,7 +31,7 @@ li {
     list-style: none;
 }
 
-#container {
+#vanta-background {
     z-index: -5;
     position : fixed;
     height:100vh;
@@ -42,16 +44,31 @@ main,
 section {
     position: relative;
 }
+.main-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 
+/* Header and nav rules */
 header {
     position: relative;
-
     min-height: 100vh;
+}
 
+.header__nav>ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 10px;
 
 }
 
-.header--info {
+.header__nav>ul>li>a {
+    font-family: 'Orbitron', sans-serif;
+    font-size : 1.3rem;
+    font-weight: bolder;
+}
+.header__info {
     position: relative;
     margin-top: 50vh;
     transform: translateY(-50%);
@@ -59,22 +76,19 @@ header {
 
 }
 
-h1 {
-
-    font-size: 3.5rem;
-    padding: 20px 15px;
-
-    color: rgba(255, 255, 255, 0.9);
-}
-
-
-.header--info>h2 {
+.header__info>h2 {
     font-size: 2em;
     padding: 20px 15px;
 
 }
+.header__info>h1 {
 
-.icon {
+    font-size: 3.5rem;
+    padding: 20px 15px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.span__rocket {
     font-size: 4.5rem;
     display: block;
     width: 4.5rem;
@@ -84,7 +98,7 @@ h1 {
 
 }
 
-.icon .fa-rocket {
+.span__rocket .fa-rocket {
     transition: all 0.5s;
     color: rgba(255, 255, 255, 0.966);
     animation: 3s cubic-bezier(.97, .1, .83, .67) infinite rocketanimation;
@@ -119,42 +133,20 @@ h1 {
 }
 
 
-
-nav>ul {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 5px;
-
-}
-
-nav>ul>li>a {
-    font-family: 'Orbitron', sans-serif;
-
-    font-weight: bolder;
-}
-
-.main-container {
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.presentation>p,
-.contact, 
-.project-element {
+.section {
     background: rgba(136, 136, 136, 0.05);
     /* box-shadow: 0 8px 32px 0 rgba(46, 46, 46, 0.37); */
     backdrop-filter: blur(8.0px);
     -webkit-backdrop-filter: blur(10.0px);
     /* border: 1px solid rgba(114, 1, 134, 0.18); */
-    margin: 0rem auto 3.5rem auto;
+    margin: 0rem auto 5rem auto;
     padding : 1rem 1.5rem;
 }
-.title-section {
+.section__title {
     padding:0px 1rem 1.5rem 0.5rem;
 }
 
-.title-section>span {
+.section__title__span{
     padding-right: 1.5rem;
 }
 .presentation>p {
@@ -168,49 +160,49 @@ footer {
 img {
     width:100%;
 }
-.icon-plus{
+.span__plus{
     display:flex;
     margin: 0 0 0 auto;
     width: 2rem;
     align-items: center;
 }
-.icon-plus .fa-plus {
+.span__plus .fa-plus {
     font-size: 2.5rem;
     color: rgba(255, 255, 255, 0.9);
     text-align: center;
 }
-.project-element{
+.project__element{
     padding:0;
 }
-.project-title-element h3
+.project__element__title h3
 {
     
     padding-bottom: 1rem;
 }
 
-.project-title-element {
+.project__element__title {
     display: flex;
     flex-flow: row wrap;
     padding: 1.5rem;
 }
-.show-info {
+.project__element__infos {
     padding:1.5rem 1rem;
   
 }
-.show-info>p {
+.project__element__infos>p {
     text-align: justify;
-    padding-bottom: 1rem;
+    padding-bottom: 1.2rem;
 }
-.project-link>a {
+.project__element__links>a {
     display : block;
     font-weight: bolder;
-
+    text-align: center;
+    padding-bottom: 1.2rem;
 }
-.project-link {
-    display: flex;
-    justify-content: space-between;
+.project__element__links {
+    margin: 0 auto;
 }
-.icon-link {
+.element__links__icon {
     padding-left: 0.5rem;
 }
 /*VERSION BUREAU DU CV*/
