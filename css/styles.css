@@ -44,16 +44,16 @@ header {
     width: 4.5rem;
     margin: 0 auto;
     transition: all 0.5s;
-
-
-}
-
-.span__rocket .fa-rocket {
-    transition: all 0.5s;
-    color: rgba(255, 255, 255, 0.966);
-    animation: 3s cubic-bezier(.97, .1, .83, .67) infinite rocketanimation;
+  
 
 }
+
+  .span__rocket .fa-rocket {
+        transition: all 0.5s;
+        color: rgba(255, 255, 255, 0.966);
+        animation: 3s cubic-bezier(.97, .1, .83, .67) infinite rocketanimation;
+
+    }
 
 @keyframes rocketanimation {
     from {

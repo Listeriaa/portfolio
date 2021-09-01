@@ -11,7 +11,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-h1, h2, h3, h4, footer p {
+h1,
+h2,
+h3,
+footer p {
   font-family: "Orbitron", sans-serif;
 }
 
@@ -74,6 +77,141 @@ header .header__info h1 {
   font-size: 3.5rem;
   padding: 20px 15px;
   color: rgba(255, 255, 255, 0.8);
+}
+header .span__rocket {
+  font-size: 4.5rem;
+  display: block;
+  width: 4.5rem;
+  margin: 0 auto;
+  transition: all 0.5s;
+}
+header .span__rocket .fa-rocket {
+  transition: all 0.5s;
+  color: rgba(255, 255, 255, 0.8);
+  animation: 3s cubic-bezier(0.67, 0.06, 0.92, 0.19) infinite rocketanimation;
+}
+
+@keyframes rocketanimation {
+  from {
+    opacity: 1;
+    transform: rotate(135deg) translateY(0px);
+  }
+  25% {
+    transform: rotate(135deg) translateY(0px);
+  }
+  80% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0;
+    color: rgba(45, 2, 94, 0.384);
+  }
+  to {
+    transform: translateY(250px) rotate(135deg);
+    opacity: 0;
+  }
+}
+/** Main container*/
+.section {
+  background: rgba(136, 136, 136, 0.05);
+  backdrop-filter: blur(8px);
+  margin: 0rem auto 5rem auto;
+  padding: 1rem 1.5rem;
+  /* border: 1px solid rgba(114, 1, 134, 0.18); */
+  /* box-shadow: 0 8px 32px 0 rgba(46, 46, 46, 0.37); */
+}
+
+.section__title {
+  padding: 0px 1rem 1.5rem 0.5rem;
+}
+
+.section__title__span {
+  padding-right: 1rem;
+}
+
+.section__paragraph {
+  text-align: justify;
+}
+
+.project__element {
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.project__element img {
+  width: 100%;
+}
+.project__element .project__element__title {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1.5rem 0;
+}
+.project__element .project__element__title h3 {
+  padding-bottom: 1rem;
+}
+.project__element .project__element__title .span__plus {
+  display: flex;
+  margin: 0 0 0 auto;
+  width: 2rem;
+  align-items: center;
+}
+.project__element .project__element__title .span__plus .fa-plus {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+}
+.project__element .project__element__infos {
+  padding: 1.5rem 0;
+}
+.project__element .project__element__infos p {
+  padding-bottom: 1.2rem;
+}
+.project__element .project__element__infos .project__element__links {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.project__element .project__element__infos .project__element__links a {
+  display: inline-block;
+  font-weight: bolder;
+  text-align: center;
+}
+.project__element .project__element__infos .project__element__links a:hover .link__icon--first, .project__element .project__element__infos .project__element__links a:focus .link__icon--first {
+  transform: translate3d(0, -105%, 0);
+}
+.project__element .project__element__infos .project__element__links a:hover .link__icon--second, .project__element .project__element__infos .project__element__links a:focus .link__icon--second {
+  transform: translate3d(0, 105%, 0);
+}
+.project__element .project__element__infos .project__element__links a .link__icon--first,
+.project__element .project__element__infos .project__element__links a .link__icon--second {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s;
+}
+.project__element .project__element__infos .project__element__links a .link__icon--first::before,
+.project__element .project__element__infos .project__element__links a .link__icon--second::before {
+  position: absolute;
+  content: attr(data-hover);
+}
+.project__element .project__element__infos .project__element__links a .link__icon--first {
+  color: #fff;
+}
+.project__element .project__element__infos .project__element__links a .link__icon--first::before {
+  top: 105%;
+  color: #7f5aa8;
+}
+.project__element .project__element__infos .project__element__links a .link__icon--second {
+  color: #7f5aa8;
+}
+.project__element .project__element__infos .project__element__links a .link__icon--second::before {
+  top: -105%;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  font-weight: bolder;
+  padding: 20px 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
