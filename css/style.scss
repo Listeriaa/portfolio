@@ -1,8 +1,10 @@
 $title-font: 'Orbitron', sans-serif;
 $main-font: 'Montserrat',sans-serif;
 $main-color:#fff;
-$violet:#7f5aa8;
+$violet:#8d7bac;
 $transparency-color: rgba($main-color, $alpha: 0.8);
+
+
 /* General rules */
 
 * {
@@ -167,6 +169,11 @@ header {
 
 .section__paragraph {
     text-align: justify;
+
+    p {
+        padding-bottom: 1.2rem;
+
+    }
 }
 
 
@@ -204,63 +211,65 @@ header {
     .project__element__infos {
         padding: 1.5rem 0;
 
-        p {
-            padding-bottom: 1.2rem;
-
-        }
-
-        .project__element__links {
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            
-            overflow: hidden;
-            a {
-                display: inline-block;
-                font-weight: bolder;
-                text-align: center;
-
-                &:hover,
-                &:focus {
-                  .link__icon--first {
-                    transform: translate3d(0, -105%, 0);
-                  }
-              
-                  .link__icon--second {
-                    transform: translate3d(0, 105%, 0);
-                  }
-                }
-                .link__icon--first,
-                .link__icon--second {
-                    display: inline-block;
-                    position: relative;
-                    transition: transform .3s;
-
-                    &::before {
-                        position: absolute;
-                        content: attr(data-hover);
-                    }
-                }
-
-                .link__icon--first{
-                    color:$main-color;
-                    &::before {
-                        top: 105%;
-                        color:$violet;
-                    }
-                }
-                .link__icon--second{
-                    color:$violet;
-                    &::before {
-                        top: -105%;
-                        color: $main-color;
-                    }
-                }
-            }
-        }
-
     }
 }
+
+/** Links */ 
+.project__element__links,
+.section__contact__links,
+.section__presentation__links {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    
+    overflow: hidden;
+}
+.section__contact__links--mail {
+    margin-bottom:1rem;
+}
+.link--hover {
+    display: inline-block;
+    font-weight: bolder;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+      .link__icon--first {
+        transform: translate3d(0, -105%, 0);
+      }
+  
+      .link__icon--second {
+        transform: translate3d(0, 105%, 0);
+      }
+    }
+    .link__icon--first,
+    .link__icon--second {
+        display: inline-block;
+        position: relative;
+        transition: transform .3s;
+
+        &::before {
+            position: absolute;
+            content: attr(data-hover);
+        }
+    }
+
+    .link__icon--first{
+        color:$main-color;
+        &::before {
+            top: 105%;
+            color:$violet;
+        }
+    }
+    .link__icon--second{
+        color:$violet;
+        &::before {
+            top: -105%;
+            color: $main-color;
+        }
+    }
+}
+
     footer {
         text-align: center;
         font-weight: bolder;
