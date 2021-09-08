@@ -212,6 +212,10 @@ header {
         padding: 1.5rem 0;
 
     }
+
+    .project__element__infos--ishidden {
+        visibility: hidden;
+    }
 }
 
 /** Links */ 
@@ -270,8 +274,8 @@ header {
     }
 }
 
-    footer {
-        text-align: center;
-        font-weight: bolder;
-        padding: 20px 10px;
-    }
+footer {
+    text-align: center;
+    font-weight: bolder;
+    padding: 20px 10px;
+}

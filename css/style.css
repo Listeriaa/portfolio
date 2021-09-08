@@ -165,6 +165,9 @@ header .span__rocket .fa-rocket {
 .project__element .project__element__infos {
   padding: 1.5rem 0;
 }
+.project__element .project__element__infos--ishidden {
+  visibility: hidden;
+}
 
 /** Links */
 .project__element__links,
