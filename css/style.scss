@@ -188,7 +188,7 @@ header {
     .project__element__title {
         display: flex;
         flex-flow: row wrap;
-        padding: 1.5rem 0;
+        padding-bottom: 1rem;
 
         h3 {
             padding-bottom: 1rem;
@@ -204,17 +204,31 @@ header {
                 font-size: 2.5rem;
                 color: $main-color;
                 text-align: center;
+                transition:all 0.5s ease;
+                &:hover{
+                   color: $violet; 
+                }
+            }
+            .fa-plus--rotate{
+                transform: rotate(0.5turn);
+
             }
         }
     }
 
-    .project__element__infos {
-        padding: 1.5rem 0;
+    .project__element__infos--isshown {
+        overflow: hidden;
+        opacity:1;
+        height: 150px;
+        transition: all 0.5s ease;
 
     }
 
     .project__element__infos--ishidden {
-        visibility: hidden;
+        opacity : 0;
+        height:0;
+        overflow: hidden;
+        transition: all 0.5s ease;
     }
 }
 
@@ -222,7 +236,7 @@ header {
 .project__element__links,
 .section__contact__links,
 .section__presentation__links {
-    margin: 0 auto;
+    margin: 0.8rem auto;
     display: flex;
     justify-content: space-around;
     

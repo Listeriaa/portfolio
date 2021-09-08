@@ -8,13 +8,15 @@ app = {
     },
 
     openInfo: function(evt) {
-        const plusElement = evt.currentTarget;
+        let plusElement = evt.currentTarget;
         
         const projectElement = plusElement.closest(".project__element");
         
         let infoElement = projectElement.querySelector(".project__element__infos");
 
         infoElement.classList.toggle("project__element__infos--ishidden");
+        infoElement.classList.toggle("project__element__infos--isshown");
+        plusElement.querySelector(".fa-plus").classList.toggle("fa-plus--rotate");
     }
 }
 

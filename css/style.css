@@ -146,7 +146,7 @@ header .span__rocket .fa-rocket {
 .project__element .project__element__title {
   display: flex;
   flex-flow: row wrap;
-  padding: 1.5rem 0;
+  padding-bottom: 1rem;
 }
 .project__element .project__element__title h3 {
   padding-bottom: 1rem;
@@ -161,19 +161,32 @@ header .span__rocket .fa-rocket {
   font-size: 2.5rem;
   color: #fff;
   text-align: center;
+  transition: all 0.5s ease;
 }
-.project__element .project__element__infos {
-  padding: 1.5rem 0;
+.project__element .project__element__title .span__plus .fa-plus:hover {
+  color: #8d7bac;
+}
+.project__element .project__element__title .span__plus .fa-plus--rotate {
+  transform: rotate(0.5turn);
+}
+.project__element .project__element__infos--isshown {
+  overflow: hidden;
+  opacity: 1;
+  height: 150px;
+  transition: all 0.5s ease;
 }
 .project__element .project__element__infos--ishidden {
-  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 
 /** Links */
 .project__element__links,
 .section__contact__links,
 .section__presentation__links {
-  margin: 0 auto;
+  margin: 0.8rem auto;
   display: flex;
   justify-content: space-around;
   overflow: hidden;
