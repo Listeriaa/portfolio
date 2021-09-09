@@ -12,6 +12,7 @@ $breakpoints: (
     large:1200px
 
 );
+
 /**Mixin*/
 
 @mixin larger-mobile {
@@ -36,14 +37,15 @@ $breakpoints: (
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: pointer;
 
 }
-
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
 body {
     color: $main-color;
     font-family: $main-font;
-
 }
 
 h1,
@@ -56,6 +58,7 @@ footer p {
 a {
     text-decoration: none;
     color: $main-color;
+    cursor: pointer;
 }
 
 li {
@@ -80,6 +83,7 @@ section {
     position: absolute;
     top: 0;
     width: 100%;
+
 }
 
 /* Header and nav rules */
@@ -155,13 +159,17 @@ header {
             font-size: 4rem;
         }
 
-        @include desktop{
+        @include tablet{
             font-size: 5rem;
+        }
+        @include desktop{
+            font-size: 6rem;
         }
         .fa-rocket {
             transition: all 0.5s;
             color: $transparency-color;
             animation: 3s cubic-bezier(.67, .06, .92, .19) infinite rocketanimation;
+            cursor: pointer;
 
         }
 
@@ -202,6 +210,10 @@ header {
     backdrop-filter: blur(8.0px);
     margin: 0rem auto 5rem auto;
     padding: 1rem 1.5rem;
+    @include tablet {
+        width: 80%;
+        border-radius: 30px;
+    }
     @include desktop{
         width: 70%;
         border-radius: 30px;
@@ -209,12 +221,34 @@ header {
     /* border: 1px solid rgba(114, 1, 134, 0.18); */
     /* box-shadow: 0 8px 32px 0 rgba(46, 46, 46, 0.37); */
 }
-
+.section__presentation {
+    .presentation__section__title{
+        font-size: 1.3rem;
+        padding-left:0.8rem;
+        @include larger-mobile {
+            padding-left:1rem;
+        }
+        @include tablet {
+            padding-left:1rem;
+            font-size: 1.5rem;
+        }
+        @include tablet {
+            padding-left:2rem;
+            font-size: 2rem;
+        }
+    }
+}
 .section__title {
     padding: 0px 1rem 1.5rem 0.5rem;
     font-size:1.3rem;
     @include larger-mobile {
         font-size: 1.5rem;
+    }
+    @include tablet {
+        font-size: 2rem;
+    }
+    @include desktop {
+        font-size: 2.5rem;
     }
 }
 
@@ -239,7 +273,7 @@ header {
         flex-direction: row;
     }
     .project__element {
-        padding: 0;
+        padding: 0 0.5rem;
         margin-bottom: 2rem;
         @include tablet {
             width:50%;
@@ -250,12 +284,22 @@ header {
     
         .project__element__title {
             display: flex;
-            flex-flow: column wrap;
-            text-align:center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            text-align: center;
             padding-bottom: 1rem;
-    
+            align-items:center;
+            //
+            
+            @include tablet{
+                text-align: left;
+                //width:80%;
+                flex-direction: row;
+                justify-content: space-between;
+            }
             h3,h4 {
-                padding-bottom: 1rem;
+                padding-bottom: 0.8rem;
+                
             }
     
             .span__plus {
@@ -268,7 +312,9 @@ header {
                     font-size: 2.5rem;
                     color: $main-color;
                     text-align: center;
+                    cursor: pointer;
                     transition:all 0.5s ease;
+
                     &:hover{
                        color: $violet; 
                     }
@@ -304,8 +350,8 @@ header {
     margin: 0.8rem auto;
     display: flex;
     justify-content: space-around;
-    
     overflow: hidden;
+    
 }
 .section__contact__links--mail {
     margin-bottom:1rem;
@@ -314,7 +360,7 @@ header {
     display: inline-block;
     font-weight: bolder;
     text-align: center;
-
+  
     &:hover,
     &:focus {
       .link__icon--first {
@@ -352,7 +398,14 @@ header {
         }
     }
 }
-
+.section__contact__links,
+.section__presentation__links {
+    .link--hover {
+        @include tablet {
+            font-size: 1.5rem;
+        }
+    }
+}
 footer {
     text-align: center;
     font-weight: bolder;

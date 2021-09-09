@@ -5,7 +5,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: pointer;
+}
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,6 +27,7 @@ footer p {
 a {
   text-decoration: none;
   color: #fff;
+  cursor: pointer;
 }
 
 li {
@@ -122,15 +127,21 @@ header .span__rocket {
     font-size: 4rem;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   header .span__rocket {
     font-size: 5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .span__rocket {
+    font-size: 6rem;
   }
 }
 header .span__rocket .fa-rocket {
   transition: all 0.5s;
   color: rgba(255, 255, 255, 0.8);
   animation: 3s cubic-bezier(0.67, 0.06, 0.92, 0.19) infinite rocketanimation;
+  cursor: pointer;
 }
 
 @keyframes rocketanimation {
@@ -162,10 +173,38 @@ header .span__rocket .fa-rocket {
   /* border: 1px solid rgba(114, 1, 134, 0.18); */
   /* box-shadow: 0 8px 32px 0 rgba(46, 46, 46, 0.37); */
 }
+@media screen and (min-width: 768px) {
+  .section {
+    width: 80%;
+    border-radius: 30px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .section {
     width: 70%;
     border-radius: 30px;
+  }
+}
+
+.section__presentation .presentation__section__title {
+  font-size: 1.3rem;
+  padding-left: 0.8rem;
+}
+@media screen and (min-width: 375px) {
+  .section__presentation .presentation__section__title {
+    padding-left: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section__presentation .presentation__section__title {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section__presentation .presentation__section__title {
+    padding-left: 2rem;
+    font-size: 2rem;
   }
 }
 
@@ -176,6 +215,16 @@ header .span__rocket .fa-rocket {
 @media screen and (min-width: 375px) {
   .section__title {
     font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section__title {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 2.5rem;
   }
 }
 
@@ -201,7 +250,7 @@ header .span__rocket .fa-rocket {
   }
 }
 .project__element__container .project__element {
-  padding: 0;
+  padding: 0 0.5rem;
   margin-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
@@ -214,12 +263,21 @@ header .span__rocket .fa-rocket {
 }
 .project__element__container .project__element .project__element__title {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
   text-align: center;
   padding-bottom: 1rem;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .project__element__container .project__element .project__element__title {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .project__element__container .project__element .project__element__title h3, .project__element__container .project__element .project__element__title h4 {
-  padding-bottom: 1rem;
+  padding-bottom: 0.8rem;
 }
 .project__element__container .project__element .project__element__title .span__plus {
   display: flex;
@@ -231,6 +289,7 @@ header .span__rocket .fa-rocket {
   font-size: 2.5rem;
   color: #fff;
   text-align: center;
+  cursor: pointer;
   transition: all 0.5s ease;
 }
 .project__element__container .project__element .project__element__title .span__plus .fa-plus:hover {
@@ -301,6 +360,13 @@ header .span__rocket .fa-rocket {
 .link--hover .link__icon--second::before {
   top: -105%;
   color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .section__contact__links .link--hover,
+.section__presentation__links .link--hover {
+    font-size: 1.5rem;
+  }
 }
 
 footer {
