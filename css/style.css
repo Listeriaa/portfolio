@@ -214,18 +214,18 @@ header .span__rocket .fa-rocket {
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
-  width: 80%;
 }
 .section__presentation .presentation__skills .presentation__skills__list .presentation__skills_element {
   position: relative;
   display: inline-block;
+  background: #fafafa1a;
   padding: 10px 15px;
   border-radius: 3px;
   margin: 5px;
 }
 .section__presentation .presentation__skills .presentation__skills__list .presentation__skills_element .skill-favorite {
   position: absolute;
-  color: #f1c40f;
+  color: #f1c40fbb;
   font-size: 20px;
   top: calc(50% - 10px);
   left: -20px;

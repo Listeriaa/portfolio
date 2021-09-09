@@ -258,12 +258,12 @@ header {
             list-style-type: none;
             margin: 0 auto;
             padding: 0;
-            width: 80%;
+            //width: 80%;
             .presentation__skills_element{
                 
                 position: relative;
                 display: inline-block;
-                //background: #1abc9c;
+                background: #fafafa1a;
                 padding: 10px 15px;
                 border-radius: 3px;
                 
@@ -272,7 +272,7 @@ header {
                 
                 .skill-favorite {
                     position: absolute;
-                    color: #f1c40f;
+                    color: #f1c40fbb;
                     font-size: 20px;
                     top: calc(50% - 10px);
                     left: -20px;
