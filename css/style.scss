@@ -1,10 +1,35 @@
+/** variables*/
+
 $title-font: 'Orbitron', sans-serif;
 $main-font: 'Montserrat',sans-serif;
 $main-color:#fff;
 $violet:#8d7bac;
 $transparency-color: rgba($main-color, $alpha: 0.8);
 
+$breakpoints: (
+    small:375px,
+    medium:768px,
+    large:1200px
 
+);
+/**Mixin*/
+
+@mixin larger-mobile {
+    @media screen and (min-width: map-get($breakpoints, small)){
+        @content;
+    }
+}
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, medium)){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, large)){
+        @content;
+    }
+}
 /* General rules */
 
 * {
@@ -71,9 +96,14 @@ header {
 
 
             li {
-                font-size: 1.3rem;
+                font-size: 1rem;
                 font-weight: bolder;
-
+                @include larger-mobile{
+                    font-size: 1.3rem;
+                }
+                @include tablet {
+                    font-size: 1.6rem;
+                }
                 a {
                     font-family: $title-font;
 
@@ -88,29 +118,46 @@ header {
         transform: translateY(-50%);
         text-align: center;
 
-        h2 {
-            font-size: 2em;
-            padding: 20px 15px;
-            color: $transparency-color;
-
-        }
-
         h1 {
 
-            font-size: 3.5rem;
+            font-size: 3rem;
+            padding: 10px 15px;
+            color: $transparency-color;
+            @include larger-mobile{
+                font-size: 3.5rem;
+            }
+            @include desktop{
+                font-size: 4rem;
+            }
+        }
+        h2 {
+            font-size: 1.8em;
             padding: 20px 15px;
             color: $transparency-color;
-
+            @include larger-mobile{
+                font-size: 2.3rem;
+            }
+            @include desktop{
+                font-size: 3rem;
+            }
         }
+
     }
 
     .span__rocket {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
         display: block;
         width: 4.5rem;
         margin: 0 auto;
         transition: all 0.5s;
 
+        @include larger-mobile{
+            font-size: 4rem;
+        }
+
+        @include desktop{
+            font-size: 5rem;
+        }
         .fa-rocket {
             transition: all 0.5s;
             color: $transparency-color;
@@ -155,12 +202,20 @@ header {
     backdrop-filter: blur(8.0px);
     margin: 0rem auto 5rem auto;
     padding: 1rem 1.5rem;
+    @include desktop{
+        width: 70%;
+        border-radius: 30px;
+    }
     /* border: 1px solid rgba(114, 1, 134, 0.18); */
     /* box-shadow: 0 8px 32px 0 rgba(46, 46, 46, 0.37); */
 }
 
 .section__title {
     padding: 0px 1rem 1.5rem 0.5rem;
+    font-size:1.3rem;
+    @include larger-mobile {
+        font-size: 1.5rem;
+    }
 }
 
 .section__title__span {
@@ -176,59 +231,69 @@ header {
     }
 }
 
-
-.project__element {
-    padding: 0;
-    margin-bottom: 2rem;
-
-    img {
-        width: 100%;
+.project__element__container {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @include tablet {
+        flex-direction: row;
     }
-
-    .project__element__title {
-        display: flex;
-        flex-flow: row wrap;
-        padding-bottom: 1rem;
-
-        h3 {
-            padding-bottom: 1rem;
+    .project__element {
+        padding: 0;
+        margin-bottom: 2rem;
+        @include tablet {
+            width:50%;
         }
-
-        .span__plus {
+        img {
+            width: 100%;
+        }
+    
+        .project__element__title {
             display: flex;
-            margin: 0 0 0 auto;
-            width: 2rem;
-            align-items: center;
-
-            .fa-plus {
-                font-size: 2.5rem;
-                color: $main-color;
-                text-align: center;
-                transition:all 0.5s ease;
-                &:hover{
-                   color: $violet; 
+            flex-flow: column wrap;
+            text-align:center;
+            padding-bottom: 1rem;
+    
+            h3,h4 {
+                padding-bottom: 1rem;
+            }
+    
+            .span__plus {
+                display: flex;
+                margin: 0  auto;
+                width: 2rem;
+                align-items: center;
+    
+                .fa-plus {
+                    font-size: 2.5rem;
+                    color: $main-color;
+                    text-align: center;
+                    transition:all 0.5s ease;
+                    &:hover{
+                       color: $violet; 
+                    }
+                }
+                .fa-plus--rotate{
+                    transform: rotate(0.5turn);
+    
                 }
             }
-            .fa-plus--rotate{
-                transform: rotate(0.5turn);
-
-            }
         }
-    }
-
-    .project__element__infos--isshown {
-        overflow: hidden;
-        opacity:1;
-        height: 150px;
-        transition: all 0.5s ease;
-
-    }
-
-    .project__element__infos--ishidden {
-        opacity : 0;
-        height:0;
-        overflow: hidden;
-        transition: all 0.5s ease;
+    
+        .project__element__infos--isshown {
+            overflow: hidden;
+            opacity:1;
+            height: 150px;
+            transition: all 0.5s ease;
+    
+        }
+    
+        .project__element__infos--ishidden {
+            opacity : 0;
+            height:0;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
     }
 }
 

@@ -1,3 +1,5 @@
+/** variables*/
+/**Mixin*/
 /* General rules */
 * {
   margin: 0;
@@ -56,8 +58,18 @@ header .header__nav ul {
   padding: 20px 10px;
 }
 header .header__nav ul li {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: bolder;
+}
+@media screen and (min-width: 375px) {
+  header .header__nav ul li {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  header .header__nav ul li {
+    font-size: 1.6rem;
+  }
 }
 header .header__nav ul li a {
   font-family: "Orbitron", sans-serif;
@@ -68,22 +80,52 @@ header .header__info {
   transform: translateY(-50%);
   text-align: center;
 }
+header .header__info h1 {
+  font-size: 3rem;
+  padding: 10px 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+@media screen and (min-width: 375px) {
+  header .header__info h1 {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .header__info h1 {
+    font-size: 4rem;
+  }
+}
 header .header__info h2 {
-  font-size: 2em;
+  font-size: 1.8em;
   padding: 20px 15px;
   color: rgba(255, 255, 255, 0.8);
 }
-header .header__info h1 {
-  font-size: 3.5rem;
-  padding: 20px 15px;
-  color: rgba(255, 255, 255, 0.8);
+@media screen and (min-width: 375px) {
+  header .header__info h2 {
+    font-size: 2.3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .header__info h2 {
+    font-size: 3rem;
+  }
 }
 header .span__rocket {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   display: block;
   width: 4.5rem;
   margin: 0 auto;
   transition: all 0.5s;
+}
+@media screen and (min-width: 375px) {
+  header .span__rocket {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .span__rocket {
+    font-size: 5rem;
+  }
 }
 header .span__rocket .fa-rocket {
   transition: all 0.5s;
@@ -120,9 +162,21 @@ header .span__rocket .fa-rocket {
   /* border: 1px solid rgba(114, 1, 134, 0.18); */
   /* box-shadow: 0 8px 32px 0 rgba(46, 46, 46, 0.37); */
 }
+@media screen and (min-width: 1200px) {
+  .section {
+    width: 70%;
+    border-radius: 30px;
+  }
+}
 
 .section__title {
   padding: 0px 1rem 1.5rem 0.5rem;
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 375px) {
+  .section__title {
+    font-size: 1.5rem;
+  }
 }
 
 .section__title__span {
@@ -136,46 +190,62 @@ header .span__rocket .fa-rocket {
   padding-bottom: 1.2rem;
 }
 
-.project__element {
+.project__element__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .project__element__container {
+    flex-direction: row;
+  }
+}
+.project__element__container .project__element {
   padding: 0;
   margin-bottom: 2rem;
 }
-.project__element img {
+@media screen and (min-width: 768px) {
+  .project__element__container .project__element {
+    width: 50%;
+  }
+}
+.project__element__container .project__element img {
   width: 100%;
 }
-.project__element .project__element__title {
+.project__element__container .project__element .project__element__title {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
+  text-align: center;
   padding-bottom: 1rem;
 }
-.project__element .project__element__title h3 {
+.project__element__container .project__element .project__element__title h3, .project__element__container .project__element .project__element__title h4 {
   padding-bottom: 1rem;
 }
-.project__element .project__element__title .span__plus {
+.project__element__container .project__element .project__element__title .span__plus {
   display: flex;
-  margin: 0 0 0 auto;
+  margin: 0 auto;
   width: 2rem;
   align-items: center;
 }
-.project__element .project__element__title .span__plus .fa-plus {
+.project__element__container .project__element .project__element__title .span__plus .fa-plus {
   font-size: 2.5rem;
   color: #fff;
   text-align: center;
   transition: all 0.5s ease;
 }
-.project__element .project__element__title .span__plus .fa-plus:hover {
+.project__element__container .project__element .project__element__title .span__plus .fa-plus:hover {
   color: #8d7bac;
 }
-.project__element .project__element__title .span__plus .fa-plus--rotate {
+.project__element__container .project__element .project__element__title .span__plus .fa-plus--rotate {
   transform: rotate(0.5turn);
 }
-.project__element .project__element__infos--isshown {
+.project__element__container .project__element .project__element__infos--isshown {
   overflow: hidden;
   opacity: 1;
   height: 150px;
   transition: all 0.5s ease;
 }
-.project__element .project__element__infos--ishidden {
+.project__element__container .project__element .project__element__infos--ishidden {
   opacity: 0;
   height: 0;
   overflow: hidden;
