@@ -31,7 +31,18 @@ $breakpoints: (
         @content;
     }
 }
-/* General rules */
+
+@mixin even(){
+    &:nth-child(even) {
+      @content;
+    }
+}
+@mixin odd(){
+    &:nth-child(odd) {
+      @content;
+    }
+}
+/** General rules*/
 
 * {
     margin: 0;
@@ -235,6 +246,92 @@ header {
         @include tablet {
             padding-left:2rem;
             font-size: 2rem;
+        }
+    }
+
+    .presentation__skills{
+        
+        .presentation__skills__list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            list-style-type: none;
+            margin: 0 auto;
+            padding: 0;
+            width: 80%;
+            .presentation__skills_element{
+                
+                position: relative;
+                display: inline-block;
+                //background: #1abc9c;
+                padding: 10px 15px;
+                border-radius: 3px;
+                
+                margin: 5px;
+    
+                
+                .skill-favorite {
+                    position: absolute;
+                    color: #f1c40f;
+                    font-size: 20px;
+                    top: calc(50% - 10px);
+                    left: -20px;
+                }
+                
+                .presentation__skills__element_name{
+                    display: inline-block;
+                    height: 20px;
+                    /*width: 100px;*/
+                    padding: 0px 5px;
+                    background: rgba($violet, $alpha: 0.6);;
+                    box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.1);
+                    vertical-align: middle;
+                    border-radius: 3px;
+                    margin-left: 10px;
+                    text-align: center;
+                   
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+                @include tablet(){
+                    width: 100%;
+                    max-width: 250px;
+                    text-align: center;
+                }
+            }
+    
+            li{
+                width: 50%;
+                @include even(){
+                    text-align: left;
+                    .skill-favorite {
+                        left: initial;
+                        right: -20px;
+                        // @include tablet {
+                        //     left: -20px;
+                        //     right: initial;
+                        // }
+                    }
+                }
+
+                @include odd(){
+                    text-align: right;
+                 
+                }
+
+                // @include tablet(){
+                //     width: 100%;
+                //     @include even(){
+                //         text-align: center;
+                     
+                //     }
+    
+                //     @include odd(){
+                //         text-align: center;
+                     
+                //     }
+                // }
+            }
         }
     }
 }

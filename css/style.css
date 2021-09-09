@@ -1,6 +1,6 @@
 /** variables*/
 /**Mixin*/
-/* General rules */
+/** General rules*/
 * {
   margin: 0;
   padding: 0;
@@ -206,6 +206,63 @@ header .span__rocket .fa-rocket {
     padding-left: 2rem;
     font-size: 2rem;
   }
+}
+.section__presentation .presentation__skills .presentation__skills__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+}
+.section__presentation .presentation__skills .presentation__skills__list .presentation__skills_element {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 3px;
+  margin: 5px;
+}
+.section__presentation .presentation__skills .presentation__skills__list .presentation__skills_element .skill-favorite {
+  position: absolute;
+  color: #f1c40f;
+  font-size: 20px;
+  top: calc(50% - 10px);
+  left: -20px;
+}
+.section__presentation .presentation__skills .presentation__skills__list .presentation__skills_element .presentation__skills__element_name {
+  display: inline-block;
+  height: 20px;
+  /*width: 100px;*/
+  padding: 0px 5px;
+  background: rgba(141, 123, 172, 0.6);
+  box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+  border-radius: 3px;
+  margin-left: 10px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+}
+@media screen and (min-width: 768px) {
+  .section__presentation .presentation__skills .presentation__skills__list .presentation__skills_element {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+}
+.section__presentation .presentation__skills .presentation__skills__list li {
+  width: 50%;
+}
+.section__presentation .presentation__skills .presentation__skills__list li:nth-child(even) {
+  text-align: left;
+}
+.section__presentation .presentation__skills .presentation__skills__list li:nth-child(even) .skill-favorite {
+  left: initial;
+  right: -20px;
+}
+.section__presentation .presentation__skills .presentation__skills__list li:nth-child(odd) {
+  text-align: right;
 }
 
 .section__title {
