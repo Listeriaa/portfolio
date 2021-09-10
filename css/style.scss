@@ -236,6 +236,7 @@ header {
     .presentation__section__title{
         font-size: 1.3rem;
         padding-left:0.8rem;
+
         @include larger-mobile {
             padding-left:1rem;
         }
@@ -243,7 +244,7 @@ header {
             padding-left:1rem;
             font-size: 1.5rem;
         }
-        @include tablet {
+        @include desktop {
             padding-left:2rem;
             font-size: 2rem;
         }
@@ -384,27 +385,27 @@ header {
             flex-direction: column;
             flex-wrap: wrap;
             text-align: center;
-            padding-bottom: 1rem;
+            padding:1rem 0 1rem 1.5rem;
             align-items:center;
-            //
             
-            @include tablet{
+            
+            @include desktop{
                 text-align: left;
                 //width:80%;
                 flex-direction: row;
                 justify-content: space-between;
             }
-            h3,h4 {
+          
+            .project__element__title_text{
                 padding-bottom: 0.8rem;
-                
+              
             }
-    
             .span__plus {
                 display: flex;
                 margin: 0  auto;
                 width: 2rem;
                 align-items: center;
-    
+              
                 .fa-plus {
                     font-size: 2.5rem;
                     color: $main-color;

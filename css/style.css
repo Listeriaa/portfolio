@@ -201,7 +201,7 @@ header .span__rocket .fa-rocket {
     font-size: 1.5rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .section__presentation .presentation__section__title {
     padding-left: 2rem;
     font-size: 2rem;
@@ -323,17 +323,17 @@ header .span__rocket .fa-rocket {
   flex-direction: column;
   flex-wrap: wrap;
   text-align: center;
-  padding-bottom: 1rem;
+  padding: 1rem 0 1rem 1.5rem;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .project__element__container .project__element .project__element__title {
     text-align: left;
     flex-direction: row;
     justify-content: space-between;
   }
 }
-.project__element__container .project__element .project__element__title h3, .project__element__container .project__element .project__element__title h4 {
+.project__element__container .project__element .project__element__title .project__element__title_text {
   padding-bottom: 0.8rem;
 }
 .project__element__container .project__element .project__element__title .span__plus {
