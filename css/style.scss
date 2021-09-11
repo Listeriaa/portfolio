@@ -237,6 +237,7 @@ header {
         font-size: 1.3rem;
         padding-left:0.8rem;
 
+        
         @include larger-mobile {
             padding-left:1rem;
         }
@@ -249,7 +250,16 @@ header {
             font-size: 2rem;
         }
     }
+    .presentation__section__paragraph{
+        p{
+            @include desktop {
+                padding-left:2rem;
+                padding-right:2rem;
+                
+            }
 
+        }
+    }
     .presentation__skills{
         
         .presentation__skills__list {
@@ -264,13 +274,13 @@ header {
                 
                 position: relative;
                 display: inline-block;
-                background: #fafafa1a;
-                padding: 10px 15px;
+                background: rgba($main-color, $alpha: 0.05);
+                padding: 8px 12px;
                 border-radius: 3px;
-                
                 margin: 5px;
-    
-                
+                font-size: 0.8rem;
+                min-width: 90px;
+
                 .skill-favorite {
                     position: absolute;
                     color: #f1c40fbb;
@@ -279,20 +289,20 @@ header {
                     left: -20px;
                 }
                 
-                .presentation__skills__element_name{
+                .presentation__skills__element_tag{
                     display: inline-block;
                     height: 20px;
-                    /*width: 100px;*/
                     padding: 0px 5px;
-                    background: rgba($violet, $alpha: 0.6);;
-                    box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.1);
+                    background: rgba($violet, $alpha: 0.4);
                     vertical-align: middle;
                     border-radius: 3px;
-                    margin-left: 10px;
+                    margin-top: 0.3rem;
                     text-align: center;
-                   
-                    font-size: 12px;
+                    font-size: 0.6rem;
                     line-height: 20px;
+                }
+                @include larger-mobile(){
+                    min-width:120px;
                 }
                 @include tablet(){
                     width: 100%;
@@ -308,10 +318,7 @@ header {
                     .skill-favorite {
                         left: initial;
                         right: -20px;
-                        // @include tablet {
-                        //     left: -20px;
-                        //     right: initial;
-                        // }
+                    
                     }
                 }
 
@@ -320,18 +327,6 @@ header {
                  
                 }
 
-                // @include tablet(){
-                //     width: 100%;
-                //     @include even(){
-                //         text-align: center;
-                     
-                //     }
-    
-                //     @include odd(){
-                //         text-align: center;
-                     
-                //     }
-                // }
             }
         }
     }
@@ -385,33 +380,49 @@ header {
             flex-direction: column;
             flex-wrap: wrap;
             text-align: center;
-            padding:1rem 0 1rem 1.5rem;
             align-items:center;
             
             
             @include desktop{
+                padding:1rem 0 1rem 2rem;
+
                 text-align: left;
-                //width:80%;
                 flex-direction: row;
+                flex-wrap: nowrap;
                 justify-content: space-between;
             }
           
             .project__element__title_text{
                 padding-bottom: 0.8rem;
-              
+
+                @include desktop() {
+
+                    h3 {
+                        font-size: 1.3rem;
+                    }
+
+                }
+                h3 {
+                    padding-bottom: 0.8rem;
+
+                }
+
             }
             .span__plus {
                 display: flex;
                 margin: 0  auto;
-                width: 2rem;
-                align-items: center;
+                justify-content: flex-end;
               
+                @include desktop(){
+                    flex : 0 1 20%;
+                   
+                }
                 .fa-plus {
                     font-size: 2.5rem;
                     color: $main-color;
                     text-align: center;
                     cursor: pointer;
-                    transition:all 0.5s ease;
+                    transition:all 0.3s ease;
 
                     &:hover{
                        color: $violet; 
@@ -429,7 +440,22 @@ header {
             opacity:1;
             height: 150px;
             transition: all 0.5s ease;
-    
+            
+            p {
+                padding : 20px 10px;
+
+            }
+            @include tablet(){
+                height: 200px;
+            }
+            @include desktop(){
+                height: 150px;
+                p {
+
+                    padding-left: 25px;
+                    padding-right: 25px;
+                }
+            }
         }
     
         .project__element__infos--ishidden {
@@ -437,6 +463,15 @@ header {
             height:0;
             overflow: hidden;
             transition: all 0.5s ease;
+            p {
+                padding : 20px 10px;
+                @include desktop(){
+                    padding-left: 25px;
+                    padding-right: 25px;
+
+                }
+            }
+        
         }
     }
 }
@@ -500,7 +535,7 @@ header {
 .section__presentation__links {
     .link--hover {
         @include tablet {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
     }
 }

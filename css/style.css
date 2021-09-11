@@ -207,6 +207,12 @@ header .span__rocket .fa-rocket {
     font-size: 2rem;
   }
 }
+@media screen and (min-width: 1200px) {
+  .section__presentation .presentation__section__paragraph p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
 .section__presentation .presentation__skills .presentation__skills__list {
   display: flex;
   flex-direction: row;
@@ -218,10 +224,12 @@ header .span__rocket .fa-rocket {
 .section__presentation .presentation__skills .presentation__skills__list .presentation__skills_element {
   position: relative;
   display: inline-block;
-  background: #fafafa1a;
-  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 12px;
   border-radius: 3px;
   margin: 5px;
+  font-size: 0.8rem;
+  min-width: 90px;
 }
 .section__presentation .presentation__skills .presentation__skills__list .presentation__skills_element .skill-favorite {
   position: absolute;
@@ -230,19 +238,22 @@ header .span__rocket .fa-rocket {
   top: calc(50% - 10px);
   left: -20px;
 }
-.section__presentation .presentation__skills .presentation__skills__list .presentation__skills_element .presentation__skills__element_name {
+.section__presentation .presentation__skills .presentation__skills__list .presentation__skills_element .presentation__skills__element_tag {
   display: inline-block;
   height: 20px;
-  /*width: 100px;*/
   padding: 0px 5px;
-  background: rgba(141, 123, 172, 0.6);
-  box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+  background: rgba(141, 123, 172, 0.4);
   vertical-align: middle;
   border-radius: 3px;
-  margin-left: 10px;
+  margin-top: 0.3rem;
   text-align: center;
-  font-size: 12px;
+  font-size: 0.6rem;
   line-height: 20px;
+}
+@media screen and (min-width: 375px) {
+  .section__presentation .presentation__skills .presentation__skills__list .presentation__skills_element {
+    min-width: 120px;
+  }
 }
 @media screen and (min-width: 768px) {
   .section__presentation .presentation__skills .presentation__skills__list .presentation__skills_element {
@@ -323,31 +334,44 @@ header .span__rocket .fa-rocket {
   flex-direction: column;
   flex-wrap: wrap;
   text-align: center;
-  padding: 1rem 0 1rem 1.5rem;
   align-items: center;
 }
 @media screen and (min-width: 1200px) {
   .project__element__container .project__element .project__element__title {
+    padding: 1rem 0 1rem 2rem;
     text-align: left;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
   }
 }
 .project__element__container .project__element .project__element__title .project__element__title_text {
   padding-bottom: 0.8rem;
 }
+@media screen and (min-width: 1200px) {
+  .project__element__container .project__element .project__element__title .project__element__title_text h3 {
+    font-size: 1.3rem;
+  }
+}
+.project__element__container .project__element .project__element__title .project__element__title_text h3 {
+  padding-bottom: 0.8rem;
+}
 .project__element__container .project__element .project__element__title .span__plus {
   display: flex;
   margin: 0 auto;
-  width: 2rem;
-  align-items: center;
+  justify-content: flex-end;
+}
+@media screen and (min-width: 1200px) {
+  .project__element__container .project__element .project__element__title .span__plus {
+    flex: 0 1 20%;
+  }
 }
 .project__element__container .project__element .project__element__title .span__plus .fa-plus {
   font-size: 2.5rem;
   color: #fff;
   text-align: center;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 .project__element__container .project__element .project__element__title .span__plus .fa-plus:hover {
   color: #8d7bac;
@@ -361,11 +385,37 @@ header .span__rocket .fa-rocket {
   height: 150px;
   transition: all 0.5s ease;
 }
+.project__element__container .project__element .project__element__infos--isshown p {
+  padding: 20px 10px;
+}
+@media screen and (min-width: 768px) {
+  .project__element__container .project__element .project__element__infos--isshown {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project__element__container .project__element .project__element__infos--isshown {
+    height: 150px;
+  }
+  .project__element__container .project__element .project__element__infos--isshown p {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
 .project__element__container .project__element .project__element__infos--ishidden {
   opacity: 0;
   height: 0;
   overflow: hidden;
   transition: all 0.5s ease;
+}
+.project__element__container .project__element .project__element__infos--ishidden p {
+  padding: 20px 10px;
+}
+@media screen and (min-width: 1200px) {
+  .project__element__container .project__element .project__element__infos--ishidden p {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
 /** Links */
@@ -422,7 +472,7 @@ header .span__rocket .fa-rocket {
 @media screen and (min-width: 768px) {
   .section__contact__links .link--hover,
 .section__presentation__links .link--hover {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
