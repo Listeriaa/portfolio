@@ -162,7 +162,14 @@ header {
         position:fixed;
         bottom:2.5rem;
         right:10px;
-        font-size: 4rem;
+        font-size: 2rem;
+        z-index:100;
+        @include tablet {
+            font-size: 3rem;
+        }
+        @include desktop {
+            font-size: 4rem;
+        }
     }
 
 }

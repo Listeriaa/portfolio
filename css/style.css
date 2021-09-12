@@ -119,7 +119,18 @@ header .back__top {
   position: fixed;
   bottom: 2.5rem;
   right: 10px;
-  font-size: 4rem;
+  font-size: 2rem;
+  z-index: 100;
+}
+@media screen and (min-width: 768px) {
+  header .back__top {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .back__top {
+    font-size: 4rem;
+  }
 }
 
 /** Main container*/
