@@ -354,7 +354,7 @@ header .back__top {
 }
 @media screen and (min-width: 768px) {
   .project__element__container .project__element .project__element__infos--isshown {
-    height: 230px;
+    height: 200px;
   }
 }
 @media screen and (min-width: 1200px) {
