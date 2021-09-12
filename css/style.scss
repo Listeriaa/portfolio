@@ -206,6 +206,7 @@ header {
     }
     .presentation__section__paragraph{
         p{
+            line-height: 1.5rem;
             @include desktop {
                 padding-left:2rem;
                 padding-right:2rem;
@@ -396,18 +397,20 @@ header {
         .project__element__infos--isshown {
             overflow: hidden;
             opacity:1;
-            height: 150px;
+            height: 210px;
             transition: all 0.5s ease;
             
             p {
-                padding : 20px 10px;
-
+                padding : 2px 10px;
+                &:first-of-type {
+                    padding-top:15px;
+                }
             }
-            @include tablet(){
-                height: 200px;
+            @include tablet {
+                height: 230px;
             }
             @include desktop(){
-                height: 150px;
+                
                 p {
 
                     padding-left: 25px;
@@ -422,7 +425,7 @@ header {
             overflow: hidden;
             transition: all 0.5s ease;
             p {
-                padding : 20px 10px;
+                padding : 2px 10px;
                 @include desktop(){
                     padding-left: 25px;
                     padding-right: 25px;

@@ -92,7 +92,7 @@ gsap.from(skills, {
         start: "-20px 80%",
 
     },
-    duration: 2,
+    duration: 1.5,
     opacity: 0,
     stagger:0.2
 })

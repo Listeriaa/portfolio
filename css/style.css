@@ -165,6 +165,9 @@ header .back__top {
     font-size: 2rem;
   }
 }
+.section__presentation .presentation__section__paragraph p {
+  line-height: 1.5rem;
+}
 @media screen and (min-width: 1200px) {
   .section__presentation .presentation__section__paragraph p {
     padding-left: 2rem;
@@ -340,21 +343,21 @@ header .back__top {
 .project__element__container .project__element .project__element__infos--isshown {
   overflow: hidden;
   opacity: 1;
-  height: 150px;
+  height: 210px;
   transition: all 0.5s ease;
 }
 .project__element__container .project__element .project__element__infos--isshown p {
-  padding: 20px 10px;
+  padding: 2px 10px;
+}
+.project__element__container .project__element .project__element__infos--isshown p:first-of-type {
+  padding-top: 15px;
 }
 @media screen and (min-width: 768px) {
   .project__element__container .project__element .project__element__infos--isshown {
-    height: 200px;
+    height: 230px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .project__element__container .project__element .project__element__infos--isshown {
-    height: 150px;
-  }
   .project__element__container .project__element .project__element__infos--isshown p {
     padding-left: 25px;
     padding-right: 25px;
@@ -367,7 +370,7 @@ header .back__top {
   transition: all 0.5s ease;
 }
 .project__element__container .project__element .project__element__infos--ishidden p {
-  padding: 20px 10px;
+  padding: 2px 10px;
 }
 @media screen and (min-width: 1200px) {
   .project__element__container .project__element .project__element__infos--ishidden p {
