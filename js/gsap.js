@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const nav = document.querySelectorAll(".header__nav li");
 const h1 = document.querySelector(".header__info__main");
 const h2 = document.querySelector(".header__info__sub");
+const topButton = document.querySelector(".back__top");
 
     /**Presentation */
 const presentation = document.querySelector(".section__presentation");
@@ -44,22 +45,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
-/**when scrolling */
-// var scrollTL = gsap.timeline({
-//     scrollTrigger: {
-//         trigger:presentation,
-//         markers:true,
-//         start: "-20px; 90%",
-//         toggleActions: "restart pause reverse none"
-//     }
-// });
 
 /**Presentation animation */
+gsap.from(topButton, {
+    scrollTrigger: {
+        trigger:presentation,
+        start: "-20px 80%",
+        scrub:true
+    },
+    duration: 1,
+    opacity: 0,
+
+});
 gsap.from(prezTitle, {
     scrollTrigger: {
         trigger:presentation,
         start: "-20px 80%",
-        
 
     },
     duration: 1,
@@ -70,7 +71,7 @@ gsap.from(paragraphs, {
     scrollTrigger: {
         trigger:paragraphs,
         start: "-20px 80%",
-        
+      
     },
     duration: 2,
     opacity: 0
@@ -79,7 +80,6 @@ gsap.from(compTitle, {
     scrollTrigger: {
         trigger:compTitle,
         start: "-20px 80%",
-        
 
     },
     duration: 1,
@@ -90,7 +90,6 @@ gsap.from(skills, {
     scrollTrigger: {
         trigger:skills,
         start: "-20px 80%",
-        
 
     },
     duration: 2,
@@ -101,8 +100,6 @@ gsap.from(downloadCV, {
     scrollTrigger: {
         trigger:downloadCV,
         start: "-20px 90%",
-        
-
     },
     duration: 1,
     opacity: 0,
@@ -126,7 +123,7 @@ targets.forEach(element => {
         scrollTrigger: {
             trigger:element,
             start: "-20px 80%",
-            markers:true,
+            
            
         },
         duration: 2,
@@ -162,7 +159,7 @@ links.forEach(element => {
         scrollTrigger: {
             trigger:element,
             start: "-20px 80%",
-            markers:true,
+            
            
         },
         duration: 1,

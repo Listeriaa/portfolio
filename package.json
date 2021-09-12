@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Laetitia Rolland developer Portfolio",
-  "main": "index.js",
+  "main": "js/index.js",
   "scripts": {
     "sass": "sass --watch ./css/style.scss:./css/style.css",
     "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"

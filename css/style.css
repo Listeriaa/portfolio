@@ -115,6 +115,12 @@ header .header__info .header__info__sub {
     font-size: 3rem;
   }
 }
+header .back__top {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 10px;
+  font-size: 4rem;
+}
 
 /** Main container*/
 .section {
