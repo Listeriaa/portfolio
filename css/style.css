@@ -355,12 +355,16 @@ header .back__top {
 @media screen and (min-width: 768px) {
   .project__element__container .project__element .project__element__infos--isshown {
     height: 200px;
+    text-align: left;
   }
 }
 @media screen and (min-width: 1200px) {
   .project__element__container .project__element .project__element__infos--isshown p {
     padding-left: 25px;
     padding-right: 25px;
+  }
+  .project__element__container .project__element .project__element__infos--isshown p:first-of-type {
+    padding-top: 2px;
   }
 }
 .project__element__container .project__element .project__element__infos--ishidden {

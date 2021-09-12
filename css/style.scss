@@ -408,6 +408,7 @@ header {
             }
             @include tablet {
                 height: 200px;
+                text-align: left;
             }
             @include desktop(){
                 
@@ -415,6 +416,9 @@ header {
 
                     padding-left: 25px;
                     padding-right: 25px;
+                    &:first-of-type {
+                        padding-top:2px;
+                    }
                 }
             }
         }
