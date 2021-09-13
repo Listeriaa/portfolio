@@ -36,6 +36,7 @@ li {
 
 #vanta-background {
   background-image: url("../images/background/bg-small.png");
+  background-size: cover;
   z-index: -5;
   top: 0;
   left: 0;
