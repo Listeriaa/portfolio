@@ -15,7 +15,6 @@
 
 
 - HTML et CSS, avec Sass et auto-prefixer
-- Utilisation d'un éditeur de contenu 3D [Naker.back](https://app.naker.io/back/)
 - Utilisation de Gsap pour l'animation au scroll.
 
 
