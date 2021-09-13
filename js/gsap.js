@@ -157,9 +157,9 @@ gsap.from(paragraphContact, {
 links.forEach(element => {
     gsap.from(element, {
         scrollTrigger: {
-            trigger:element,
+            trigger:contactTitle,
             start: "-20px 80%",
-            
+            markers:true
            
         },
         duration: 1,
