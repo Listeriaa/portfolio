@@ -159,8 +159,7 @@ links.forEach(element => {
         scrollTrigger: {
             trigger:contactTitle,
             start: "-20px 80%",
-            markers:true
-           
+            
         },
         duration: 1,
         opacity: 0,
