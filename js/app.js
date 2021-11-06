@@ -1,13 +1,14 @@
 app = {
     
     init: function() {
+        
+        app.addYear();
 
         const allPlusElement = document.querySelectorAll(".span__plus");
       
         allPlusElement.forEach(element => {
             element.addEventListener("click", app.openInfo);
         });
-
     },
 
     /**
@@ -26,6 +27,17 @@ app = {
         plusElement.querySelector(".fa-plus").classList.toggle("fa-plus--rotate");
     },
 
+    /**
+     * Method to add the current year in footer
+     */
+    addYear : function(){
+        date = new Date;
+        annee = date.getFullYear();
+
+        span = document.getElementById("year");
+        span.textContent = annee;
+
+    }
     
 
 

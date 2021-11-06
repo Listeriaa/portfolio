@@ -220,10 +220,12 @@ header {
     .presentation__section__paragraph{
         p{
             line-height: 1.5rem;
+            font-weight: 700;
             @include desktop {
                 padding-left:2rem;
                 padding-right:2rem;
-                
+                line-height: 1.7rem;
+                font-size: 1.2rem;
             }
 
         }
@@ -257,6 +259,9 @@ header {
                     left: -20px;
                 }
                 
+                .presentation__skills__element_name {
+                    font-weight: 800;
+                }
                 .presentation__skills__element_tag{
                     display: inline-block;
                     height: 20px;
@@ -322,7 +327,7 @@ header {
 }
 
 .section__paragraph {
-    text-align: justify;
+    text-align: left;
 
     p {
         padding-bottom: 1.2rem;

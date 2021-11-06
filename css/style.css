@@ -187,11 +187,14 @@ header .back__top {
 }
 .section__presentation .presentation__section__paragraph p {
   line-height: 1.5rem;
+  font-weight: 700;
 }
 @media screen and (min-width: 1200px) {
   .section__presentation .presentation__section__paragraph p {
     padding-left: 2rem;
     padding-right: 2rem;
+    line-height: 1.7rem;
+    font-size: 1.2rem;
   }
 }
 .section__presentation .presentation__skills .presentation__skills__list {
@@ -217,6 +220,9 @@ header .back__top {
   font-size: 20px;
   top: calc(50% - 10px);
   left: -20px;
+}
+.section__presentation .presentation__skills .presentation__skills__list .presentation__skills_element .presentation__skills__element_name {
+  font-weight: 800;
 }
 .section__presentation .presentation__skills .presentation__skills__list .presentation__skills_element .presentation__skills__element_tag {
   display: inline-block;
@@ -282,7 +288,7 @@ header .back__top {
 }
 
 .section__paragraph {
-  text-align: justify;
+  text-align: left;
 }
 .section__paragraph p {
   padding-bottom: 1.2rem;
