@@ -230,6 +230,42 @@ header {
 
         }
     }
+
+    .presentation__formation {
+        display : flex;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .formation__element {
+            text-align: center;
+            &:first-child {
+                padding-bottom: 1rem;
+            }
+            h4 {
+                padding : 0.5rem 0;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                img {
+                    width :40%;
+                    
+                }
+            }
+            @include tablet {
+                width:50%;
+                img {
+                    width: 50%;
+                }
+            }
+        }
+    }
     .presentation__skills{
         
         .presentation__skills__list {
@@ -309,7 +345,7 @@ header {
     }
 }
 .section__title {
-    padding: 0px 1rem 1.5rem 0.5rem;
+    padding: 1.5rem 1rem 1.5rem 0.5rem;
     font-size:1.3rem;
     @include larger-mobile {
         font-size: 1.5rem;

@@ -197,6 +197,42 @@ header .back__top {
     font-size: 1.2rem;
   }
 }
+.section__presentation .presentation__formation {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .section__presentation .presentation__formation {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.section__presentation .presentation__formation .formation__element {
+  text-align: center;
+}
+.section__presentation .presentation__formation .formation__element:first-child {
+  padding-bottom: 1rem;
+}
+.section__presentation .presentation__formation .formation__element h4 {
+  padding: 0.5rem 0;
+}
+.section__presentation .presentation__formation .formation__element div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.section__presentation .presentation__formation .formation__element div img {
+  width: 40%;
+}
+@media screen and (min-width: 768px) {
+  .section__presentation .presentation__formation .formation__element {
+    width: 50%;
+  }
+  .section__presentation .presentation__formation .formation__element img {
+    width: 50%;
+  }
+}
 .section__presentation .presentation__skills .presentation__skills__list {
   display: flex;
   flex-direction: row;
@@ -264,7 +300,7 @@ header .back__top {
 }
 
 .section__title {
-  padding: 0px 1rem 1.5rem 0.5rem;
+  padding: 1.5rem 1rem 1.5rem 0.5rem;
   font-size: 1.3rem;
 }
 @media screen and (min-width: 375px) {
