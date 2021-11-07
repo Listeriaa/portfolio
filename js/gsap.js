@@ -13,7 +13,8 @@ const topButton = document.querySelector(".back__top");
 const presentation = document.querySelector(".section__presentation");
 const prezTitle = presentation.querySelector(".section__title");
 const paragraphs = presentation.querySelectorAll(".presentation__section__paragraph p");
-const compTitle = presentation.querySelector(".presentation__section__paragraph h3");
+const formationTitle = presentation.querySelectorAll(".formation__title");
+const compTitle = presentation.querySelector(".comp__title");
 const skills = presentation.querySelectorAll(".presentation__skills__list li");
 const downloadCV = presentation.querySelector(".section__presentation__links");
 
@@ -75,6 +76,16 @@ gsap.from(paragraphs, {
     },
     duration: 2,
     opacity: 0
+})
+gsap.from(formationTitle, {
+    scrollTrigger: {
+        trigger:formationTitle,
+        start: "-20px 80%",
+
+    },
+    duration: 1,
+    opacity: 0,
+    x: -100
 })
 gsap.from(compTitle, {
     scrollTrigger: {
