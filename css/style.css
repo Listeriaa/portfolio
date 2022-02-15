@@ -405,7 +405,7 @@ header .back__top {
 .project__element__container .project__element .project__element__infos--isshown {
   overflow: hidden;
   opacity: 1;
-  height: 300px;
+  height: 250px;
   transition: all 0.5s ease;
 }
 .project__element__container .project__element .project__element__infos--isshown p {
